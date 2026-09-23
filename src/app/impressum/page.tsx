@@ -19,7 +19,7 @@ export default function ImpressumPage() {
         <div className="space-y-10 text-sm leading-relaxed text-muted">
           <section>
             <address className="not-italic text-ink">
-              <p>Aaron Martin</p>
+              <p>Kindpeopleonly GmbH i.G.</p>
               <p>Organisation und Durchführung von Veranstaltungen mit dem Schwerpunkt Musik</p>
               <p>Kanalweg 46</p>
               <p>76149 Karlsruhe</p>
@@ -32,7 +32,7 @@ export default function ImpressumPage() {
           </section>
           <section>
             <h2 className="mb-3 text-base font-semibold text-ink">Redaktionell verantwortlich</h2>
-            <address className="not-italic text-ink"><p>Aaron Martin</p><p>Kanalweg 46</p><p>76149 Karlsruhe</p></address>
+            <address className="not-italic text-ink"><p>Kindpeopleonly GmbH i.G.</p><p>Kanalweg 46</p><p>76149 Karlsruhe</p></address>
           </section>
           <section>
             <h2 className="mb-3 text-base font-semibold text-ink">Verbraucherstreitbeilegung</h2>

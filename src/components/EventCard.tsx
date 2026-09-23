@@ -72,21 +72,13 @@ export function EventCard({ event }: EventCardProps) {
         </Link>
 
         <div className="mt-4 flex flex-col gap-3">
-          {event.id === "summer-closing-2026" && !soldOut && (
-            <p className="max-w-[34rem] text-[0.58rem] font-semibold uppercase leading-[1.3] tracking-[0.06em] text-muted sm:text-[0.68rem]">
-              Enter password “KPO” for access to the ticket shop.
-            </p>
-          )}
           <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-[0.6rem]">
           {soldOut ? (
             <span className="inline-flex min-h-11 flex-1 items-center justify-center gap-2 rounded-full border border-line px-6 text-[0.8rem] font-bold uppercase text-muted">
               Sold Out
             </span>
           ) : (
-            <EventTicketButton
-              href={event.ticketUrl}
-              eventId={event.id}
-            />
+            <EventTicketButton href={event.ticketUrl} />
           )}
           <Link
             href={detailHref}

@@ -118,7 +118,7 @@ export default async function EventPage({ params }: PageProps) {
               priority
               className={`h-auto w-full rounded-[var(--radius)] object-cover ${
                 event.flyerAspect === "1/1" ? "aspect-square" : "aspect-[4/5]"
-              }`}
+              } ${soldOut ? "grayscale-[0.35] brightness-90" : ""}`}
               sizes="(max-width: 760px) 100vw, 440px"
             />
           </div>
@@ -153,17 +153,7 @@ export default async function EventPage({ params }: PageProps) {
                 Sold Out
               </p>
             ) : (
-              <div className="flex max-w-[34rem] flex-col gap-3">
-                {event.id === "summer-closing-2026" && (
-                  <p className="text-[0.68rem] font-semibold uppercase leading-[1.35] tracking-[0.08em] text-muted sm:text-[0.72rem]">
-                    Enter password “KPO” for access to the ticket shop.
-                  </p>
-                )}
-                <EventTicketButton
-                  href={event.ticketUrl}
-                  eventId={event.id}
-                />
-              </div>
+              <EventTicketButton href={event.ticketUrl} />
             )}
 
             {facts.length > 0 && (
