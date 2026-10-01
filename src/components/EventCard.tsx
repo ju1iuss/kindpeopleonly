@@ -77,9 +77,9 @@ export function EventCard({ event }: EventCardProps) {
             <span className="inline-flex min-h-11 flex-1 items-center justify-center gap-2 rounded-full border border-line px-6 text-[0.8rem] font-bold uppercase text-muted">
               Sold Out
             </span>
-          ) : (
+          ) : event.ticketUrl ? (
             <EventTicketButton href={event.ticketUrl} />
-          )}
+          ) : null}
           <Link
             href={detailHref}
             className="inline-flex min-h-11 w-full items-center justify-center rounded-full border border-[rgba(242,240,236,0.28)] bg-transparent px-[1.2rem] text-[0.68rem] font-semibold uppercase text-ink transition-[border-color,background-color] duration-200 hover:border-[rgba(242,240,236,0.6)] hover:bg-[rgba(242,240,236,0.05)] sm:w-auto sm:text-[0.8rem]"

@@ -101,6 +101,21 @@
       "einlass": "18+",
       "preis": "Limited tickets",
       "adresse": "Karlsruhe"
+    },
+    {
+      "id": "halloween-2026",
+      "titel": "Halloween",
+      "datum": "2026-10-31",
+      "uhrzeit": "23:00",
+      "location": "Eat and Greet, Karlsruhe",
+      "flyer": "/assets/flyer/halloween-2026.jpg",
+      "flyerAspect": "4/5",
+      "ticketUrl": "",
+      "status": "verfuegbar",
+      "info": "halloween event. house music and more. kindpeopleonly presents. 23:00–04:00.",
+      "musik": "house music and more",
+      "lineup": "kindpeopleonly",
+      "adresse": "Alter Schlachthof 7a, 76131 Karlsruhe"
     }
   ]
 }

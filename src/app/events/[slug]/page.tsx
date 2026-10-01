@@ -152,9 +152,9 @@ export default async function EventPage({ params }: PageProps) {
               <p className="m-0 inline-flex min-h-[52px] items-center rounded-full border border-line px-9 text-[0.85rem] font-bold uppercase text-muted">
                 Sold Out
               </p>
-            ) : (
+            ) : event.ticketUrl ? (
               <EventTicketButton href={event.ticketUrl} />
-            )}
+            ) : null}
 
             {facts.length > 0 && (
               <dl className="mt-[clamp(1.75rem,4vw,2.5rem)] grid grid-cols-[repeat(auto-fill,minmax(150px,1fr))] gap-x-6 gap-y-5 border-t border-line pt-[clamp(1.5rem,3vw,2rem)]">
