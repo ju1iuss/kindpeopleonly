@@ -19,7 +19,7 @@ export default function ImpressumPage() {
         <div className="space-y-10 text-sm leading-relaxed text-muted">
           <section>
             <address className="not-italic text-ink">
-              <p>Kindpeopleonly GmbH i.G.</p>
+              <p>Aaron Martin foreverproject</p>
               <p>Organisation und Durchführung von Veranstaltungen mit dem Schwerpunkt Musik</p>
               <p>Kanalweg 46</p>
               <p>76149 Karlsruhe</p>
