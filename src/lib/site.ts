@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Kind People Only",
   shortName: "kindpeopleonly",
   city: "Karlsruhe",
-  url: "https://www.kindpeopleonly.de",
+  url: "https://www.kindpeopleonly.com",
   email: "info@kindpeopleonly.com",
   instagram: "https://www.instagram.com/kindpeopleonly_/",
   claim: "A crowd you actually want to be around.",

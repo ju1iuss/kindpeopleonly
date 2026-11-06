@@ -2,7 +2,7 @@
 
 Modern Next.js site for the Karlsruhe event collective — same design language and content as the previous static landing page, with Sanity CMS ready when you connect a project.
 
-**Live domain:** [www.kindpeopleonly.de](https://www.kindpeopleonly.de)
+**Live domain:** [www.kindpeopleonly.com](https://www.kindpeopleonly.com)
 
 ## Stack
 
@@ -79,8 +79,8 @@ Optimized files live under `public/assets/`. Do **not** commit raw `quellmateria
 
 1. Push this repo to GitHub/GitLab.
 2. Import in Vercel, set the Sanity env vars if used.
-3. Point `kindpeopleonly.de` / `www` to the Vercel project.
-4. Confirm OG preview (WhatsApp/iMessage) uses `https://www.kindpeopleonly.de/og-image.jpg`.
+3. Point `kindpeopleonly.com` / `www` to the Vercel project.
+4. Confirm OG preview (WhatsApp/iMessage) uses `https://www.kindpeopleonly.com/og-image.jpg`.
 
 ## Scripts
 
