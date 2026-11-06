@@ -33,6 +33,24 @@ type WebsiteEventRow = {
 
 export type RemoteEvent = Partial<Event>;
 
+/** Prüft den Team-Schlüssel der App: Nur damit liefert Supabase Team-Daten. */
+export async function isTeamKey(teamKey: string): Promise<boolean> {
+  if (!teamKey || !isSupabaseConfigured()) return false;
+  const headers: Record<string, string> = { apikey: supabaseKey, "x-kpo-key": teamKey };
+  if (!supabaseKey.startsWith("sb_")) headers.Authorization = `Bearer ${supabaseKey}`;
+  try {
+    const res = await fetch(`${supabaseUrl}/rest/v1/people?select=id&limit=1`, {
+      headers,
+      cache: "no-store",
+    });
+    if (!res.ok) return false;
+    const rows = (await res.json()) as unknown[];
+    return rows.length > 0;
+  } catch {
+    return false;
+  }
+}
+
 /** Öffentliche Events aus der App, oder `null`, wenn Supabase nicht erreichbar ist. */
 export async function fetchWebsiteEvents(): Promise<RemoteEvent[] | null> {
   if (!isSupabaseConfigured()) return null;
