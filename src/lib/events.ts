@@ -3,6 +3,7 @@ import { siteConfig } from "@/lib/site";
 import type { Event, EventStatus, SiteSettings } from "@/lib/types";
 import { sanityClient } from "@/lib/sanity/client";
 import { isSanityConfigured } from "@/lib/sanity/env";
+import { fetchWebsiteEvents } from "@/lib/supabase";
 import {
   eventBySlugQuery,
   eventsQuery,
@@ -56,6 +57,13 @@ const defaultSettings: SiteSettings = {
 };
 
 export async function getEvents(): Promise<Event[]> {
+  // 1. Events aus der KPO-App (Supabase)
+  const remote = await fetchWebsiteEvents();
+  if (remote) {
+    return remote
+      .map(normalizeEvent)
+      .sort((a, b) => a.datum.localeCompare(b.datum));
+  }
   if (isSanityConfigured() && sanityClient) {
     try {
       const data = await sanityClient.fetch<Array<Partial<Event>>>(eventsQuery);
@@ -68,6 +76,11 @@ export async function getEvents(): Promise<Event[]> {
 }
 
 export async function getEventBySlug(slug: string): Promise<Event | null> {
+  const remote = await fetchWebsiteEvents();
+  if (remote) {
+    const match = remote.find((e) => e.id === slug);
+    return match ? normalizeEvent(match) : null;
+  }
   if (isSanityConfigured() && sanityClient) {
     try {
       const data = await sanityClient.fetch<Partial<Event> | null>(
