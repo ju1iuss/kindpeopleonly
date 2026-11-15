@@ -47,7 +47,7 @@ export function EventCard({ event }: EventCardProps) {
             </span>
           )}
           {soldOut && (
-            <span className="absolute top-[0.9rem] left-[0.9rem] rounded-full bg-[rgba(14,13,18,0.75)] px-[0.85rem] py-[0.35rem] text-[0.7rem] font-bold uppercase text-ink backdrop-blur-sm">
+            <span className="absolute top-[0.9rem] left-[0.9rem] rounded-full bg-[rgba(18,18,18,0.75)] px-[0.85rem] py-[0.35rem] text-[0.7rem] font-bold uppercase text-ink backdrop-blur-sm">
               Sold Out
             </span>
           )}

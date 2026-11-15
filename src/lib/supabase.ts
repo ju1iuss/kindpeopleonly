@@ -3,9 +3,9 @@ import type { Event, EventStatus, FlyerAspect } from "@/lib/types";
 // Events werden in der KPO-App gepflegt und liegen in Supabase.
 // Der Publishable Key ist für den öffentlichen Einsatz gedacht; die Website
 // sieht nur öffentliche Events über die Funktion `website_events`.
-const supabaseUrl =
+export const supabaseUrl =
   process.env.NEXT_PUBLIC_SUPABASE_URL || "https://mmusokbogqzgwfpxzpoa.supabase.co";
-const supabaseKey =
+export const supabaseKey =
   process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY ||
   "sb_publishable_uUFpEMQAQMl0smaprYeqsA_KB965TtT";
 

@@ -27,7 +27,7 @@ export function Hero({ logoSrc, posterSrc, claim }: HeroProps) {
         className="pointer-events-none absolute inset-0 z-0"
         style={{
           background:
-            "linear-gradient(to bottom, rgba(14,13,18,0.35) 0%, rgba(14,13,18,0.15) 40%, rgba(14,13,18,0.45) 78%, var(--bg) 100%)",
+            "linear-gradient(to bottom, rgba(18,18,18,0.35) 0%, rgba(18,18,18,0.15) 40%, rgba(18,18,18,0.45) 78%, var(--bg) 100%)",
         }}
       />
       <div className="hero-content relative z-[1] p-6 text-center [animation:hero-in_1.2s_cubic-bezier(0.22,1,0.36,1)_0.15s_both]">

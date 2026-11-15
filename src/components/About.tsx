@@ -28,7 +28,7 @@ export function About({
         className="absolute inset-0 -z-10"
         style={{
           background:
-            "linear-gradient(to bottom, var(--bg) 0%, rgba(14,13,18,0.78) 25%, rgba(14,13,18,0.78) 75%, var(--bg) 100%)",
+            "linear-gradient(to bottom, var(--bg) 0%, rgba(18,18,18,0.78) 25%, rgba(18,18,18,0.78) 75%, var(--bg) 100%)",
         }}
       />
       <div className="relative mx-auto max-w-[var(--max-w)]">

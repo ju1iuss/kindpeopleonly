@@ -17,7 +17,7 @@ export default function StudioPage() {
           display: "grid",
           placeItems: "center",
           padding: "2rem",
-          background: "#0e0d12",
+          background: "#121212",
           color: "#f2f0ec",
           fontFamily: "system-ui, sans-serif",
         }}
@@ -26,14 +26,14 @@ export default function StudioPage() {
           <h1 style={{ fontSize: "1.5rem", marginBottom: "1rem" }}>
             Sanity Studio
           </h1>
-          <p style={{ lineHeight: 1.6, color: "#aaa6b3" }}>
+          <p style={{ lineHeight: 1.6, color: "#a6a6a6" }}>
             No Sanity project connected yet. Copy{" "}
             <code style={{ color: "#f2f0ec" }}>.env.example</code> to{" "}
             <code style={{ color: "#f2f0ec" }}>.env.local</code>, add your
             project ID and dataset, restart the dev server, then reload this
             page.
           </p>
-          <p style={{ lineHeight: 1.6, color: "#aaa6b3", marginTop: "1rem" }}>
+          <p style={{ lineHeight: 1.6, color: "#a6a6a6", marginTop: "1rem" }}>
             Until then the public site runs from{" "}
             <code style={{ color: "#f2f0ec" }}>content/events.json</code>.
           </p>
