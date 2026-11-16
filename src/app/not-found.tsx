@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { KpoText } from "@/components/KpoText";
 
 export default function NotFound() {
   return (
@@ -8,7 +9,7 @@ export default function NotFound() {
       <Header logoSrc="/assets/logo.png" homeHref="/" />
       <main className="mx-auto flex min-h-[60vh] max-w-[44rem] flex-col justify-center px-[clamp(1.25rem,4vw,3rem)] pt-[calc(var(--header-h)+2rem)] pb-16">
         <h1 className="mb-4 font-display text-[clamp(2.5rem,7vw,4rem)] leading-none uppercase">
-          Not found
+          <KpoText text="Not found" />
         </h1>
         <p className="mb-8 text-muted">
           This page does not exist — maybe the night already happened.

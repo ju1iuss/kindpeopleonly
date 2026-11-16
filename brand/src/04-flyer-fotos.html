@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><link rel="stylesheet" href="board.css">
+<style>
+  .grid { display: grid; grid-template-columns: 440px 290px 1fr; gap: 28px; flex: 1; min-height: 0; }
+  .flyer { position: relative; height: 100%; max-height: 780px; aspect-ratio: 4 / 5; }
+  .flyer img { width: 440px; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 14px; display: block; }
+  .dot { position: absolute; width: 26px; height: 26px; border-radius: 50%; background: var(--kpo-white); color: #121212; font-size: 13px; font-weight: 800; display: grid; place-items: center; box-shadow: 0 2px 10px rgba(0,0,0,.5); }
+  .anat { display: flex; flex-direction: column; gap: 12px; }
+  .anat div { display: grid; grid-template-columns: 26px 1fr; gap: 12px; font-size: 13px; color: var(--kpo-muted); line-height: 1.4; }
+  .anat i { width: 26px; height: 26px; border-radius: 50%; background: var(--kpo-white); color: #121212; font-style: normal; font-size: 13px; font-weight: 800; display: grid; place-items: center; }
+  .anat b { color: var(--kpo-white); }
+  .bgs { display: flex; gap: 10px; margin-top: 4px; }
+  .bgs img { width: 92px; height: 92px; object-fit: cover; border-radius: 10px; }
+  .photos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .photos div { position: relative; aspect-ratio: 1; border-radius: 12px; overflow: hidden; }
+  .photos img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 100%; }
+  .rules { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px; margin-top: 16px; }
+  .rules div { font-size: 13px; color: var(--kpo-muted); line-height: 1.45; }
+  .rules b { color: var(--kpo-white); }
+</style></head>
+<body><div class="board">
+  <div class="head">
+    <h1>Flyer &amp; Fotos</h1>
+    <div class="meta"><span>Brand v1 · 04 · Instagram, Print</span><img src="../../public/assets/logo.png" alt=""></div>
+  </div>
+
+  <div class="grid">
+    <div class="flyer">
+      <img src="img/flyer-halloween.jpg" alt="Flyer Halloween">
+      <span class="dot" style="left:315px;top:29px">1</span>
+      <span class="dot" style="left:381px;top:173px">2</span>
+      <span class="dot" style="left:381px;top:307px">3</span>
+      <span class="dot" style="left:381px;top:400px">4</span>
+      <span class="dot" style="left:357px;top:433px">5</span>
+      <span class="dot" style="left:357px;top:475px">6</span>
+    </div>
+
+    <div class="anat">
+      <div class="label" style="display:block">Aufbau Event-Flyer · 4:5</div>
+      <div><i>1</i><span><b>Logo + „PRESENTS“</b> klein, oben mittig.</span></div>
+      <div><i>2</i><span><b>Datum-Box</b> KPO-Rot, leicht durchsichtig, kaum Rand. Zahl in Bastardo Black füllt sie fast ganz, Monat darunter.</span></div>
+      <div><i>3</i><span><b>Titel-Stapel</b> Bastardo, Schnitte im Wechsel (Black / Light), jede Zeile gestaucht oder gestreckt auf volle Breite.</span></div>
+      <div><i>4</i><span><b>Location</b> in weißen Versalien.</span></div>
+      <div><i>5</i><span><b>Stadt-Label</b> eckig in Rot mit schwarzer Schrift.</span></div>
+      <div><i>6</i><span><b>Uhrzeit</b> weiß, breit gesperrt.</span></div>
+      <div class="label" style="display:block;margin-top:8px">Hintergründe</div>
+      <div style="display:block" class="note">Ein Foto mit rotem Licht, Vorhang oder Discokugel. Unscharf, Korn drüber, Text bleibt scharf.</div>
+      <div class="bgs" style="display:flex"><img src="img/flyer-closing.jpg" alt=""><img src="img/flyer-vaya.jpg" alt=""></div>
+    </div>
+
+    <div>
+      <div class="label" style="margin-bottom:12px">Fotostil · echte Nächte, kein Stock</div>
+      <div class="photos">
+        <div class="grain"><img src="img/foto-halloween.jpg" alt=""></div>
+        <div class="grain"><img src="img/foto-dj-crowd.jpg" alt=""></div>
+        <div class="grain"><img src="img/foto-selfie.jpg" alt=""></div>
+        <div class="grain"><img src="img/foto-drink.jpg" alt=""></div>
+        <div class="grain"><img src="img/foto-crowd-licht.jpg" alt=""></div>
+        <div class="grain"><img src="img/foto-djs.jpg" alt=""></div>
+      </div>
+      <div class="rules">
+        <div><b>Direkter Blitz</b>, harte Schatten, tiefe Schwarztöne.</div>
+        <div><b>Filmkorn</b> 8–12 %, leichte Unschärfe erlaubt.</div>
+        <div><b>Echte Momente:</b> Crowd, DJs, Lachen, Hände hoch.</div>
+        <div><b>Licht</b> rot oder kalt-weiß, Hauttöne bleiben warm.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot"><span>Vorlagen: public/assets/flyer</span><span>brand/README.md</span></div>
+</div></body></html>

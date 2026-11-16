@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { siteConfig } from "@/lib/site";
+import { KpoText } from "@/components/KpoText";
 
 export default function KontaktPage() {
   const [copied, setCopied] = useState(false);
@@ -19,7 +20,7 @@ export default function KontaktPage() {
       <Header homeHref="/" />
       <main className="mx-auto max-w-[44rem] px-[clamp(1.25rem,4vw,3rem)] pt-[calc(var(--header-h)+clamp(2.5rem,6vw,4rem))] pb-[clamp(3rem,6vw,5rem)]">
         <p className="mb-5 text-[0.78rem] font-bold uppercase tracking-[0.16em] text-muted">Get in touch</p>
-        <h1 className="font-display text-[clamp(2.8rem,8vw,5rem)] font-black uppercase leading-none">Contact</h1>
+        <h1 className="font-display text-[clamp(2.8rem,8vw,5rem)] uppercase leading-none"><KpoText text="Contact" /></h1>
         <p className="mt-6 max-w-[34rem] text-lg leading-relaxed text-muted">For bookings, collaborations, press and everything else, reach out directly.</p>
         <div className="mt-12 flex flex-wrap items-center gap-4 border-y border-line py-6">
           <a href={`mailto:${siteConfig.email}`} className="break-all text-[clamp(1.2rem,4vw,2rem)] font-semibold text-ink underline decoration-line underline-offset-8">{siteConfig.email}</a>

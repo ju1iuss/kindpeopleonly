@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { KpoText } from "@/components/KpoText";
 
 export const metadata: Metadata = {
   title: "Impressum",
@@ -15,7 +16,7 @@ export default function ImpressumPage() {
     <>
       <Header homeHref="/" />
       <main className="legal mx-auto max-w-[44rem] px-[clamp(1.25rem,4vw,3rem)] pt-[calc(var(--header-h)+clamp(2.5rem,6vw,4rem))] pb-[clamp(3rem,6vw,5rem)]">
-        <h1 className="mb-8 font-display text-[clamp(2.5rem,7vw,4rem)] font-black leading-none uppercase">Impressum</h1>
+        <h1 className="mb-8 font-display text-[clamp(2.5rem,7vw,4rem)] leading-none uppercase"><KpoText text="Impressum" /></h1>
         <div className="space-y-10 text-sm leading-relaxed text-muted">
           <section>
             <address className="not-italic text-ink">

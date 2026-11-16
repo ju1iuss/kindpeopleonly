@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><link rel="stylesheet" href="board.css">
+<style>
+  .grid { display: grid; grid-template-columns: 0.9fr 1.5fr; gap: 24px; flex: 1; min-height: 0; }
+  .left { display: flex; flex-direction: column; gap: 16px; }
+  .logo-card { display: flex; align-items: center; justify-content: center; height: 250px; background: var(--kpo-surface); border-radius: 20px; }
+  .logo-card img { height: 170px; }
+  .poster { position: relative; display: flex; gap: 18px; background: var(--kpo-surface); border-radius: 20px; padding: 16px; height: 300px; flex: none; }
+  .poster img { height: 268px; width: 214px; object-fit: cover; border-radius: 10px; flex: none; }
+  .poster .txt { display: flex; flex-direction: column; justify-content: center; gap: 8px; }
+  .scale { display: flex; flex-direction: column; background: var(--kpo-surface); border-radius: 20px; padding: 8px 28px; }
+  .step { display: grid; grid-template-columns: 150px 1fr; align-items: center; gap: 20px; padding: 14px 0; border-bottom: 1px solid var(--kpo-line); }
+  .step:last-child { border-bottom: 0; }
+  .step .spec { color: var(--kpo-muted); font-size: 12px; line-height: 1.5; }
+  .step .spec b { display: block; color: var(--kpo-white); font-size: 13px; }
+  .bas { font-family: var(--kpo-font-display); }
+  .weights { display: flex; gap: 22px; align-items: baseline; font-family: var(--kpo-font-display); font-size: 30px; letter-spacing: -0.03em; }
+  .weights span small { display: block; font-family: var(--kpo-font-ui); font-size: 11px; color: var(--kpo-faint); letter-spacing: 0.06em; text-transform: uppercase; margin-top: 4px; }
+  .stack { width: 214px; height: 268px; flex: none; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 10px; background: linear-gradient(160deg,#e4e4e4,#a9a9a9); position: relative; overflow: hidden; font-family: var(--kpo-font-display); color: #0a0a0a; letter-spacing: -.02em; }
+  
+  .stack > * { position: relative; display: block; }
+  .stack .box { background: rgba(255, 59, 59, .88); padding: 4px 12px 0; display: flex; justify-content: center; }
+  .stack .box span { display: block; }
+</style></head>
+<body><div class="board">
+  <div class="head">
+    <h1>Schrift</h1>
+    <div class="meta"><span>Brand v1 · 02</span><img src="../../public/assets/logo.png" alt=""></div>
+  </div>
+
+  <div class="grid">
+    <div class="left">
+      <div class="logo-card"><img src="../../public/assets/logo.png" alt="Logo"></div>
+      <div class="note"><b>Logo:</b> handgezeichnet und wellig. Nur als Datei verwenden (public/assets/logo.png), nie mit einer Schrift nachbauen, nie verzerren. Weiß auf Dunkel, Schwarz auf Hell oder Rot.</div>
+      <div class="poster">
+        <div class="stack grain">
+          <div class="box"><span style="font-weight:900;font-size:118px;transform:scale(1.12,1);line-height:.8">03</span></div>
+          <div class="box" style="margin-top:-2px"><span style="font-weight:900;font-size:27px;transform:scale(1.04,1);line-height:.95">OCTOBER</span></div>
+          <span style="font-weight:900;font-size:44px;transform:scale(.86,1.25);line-height:.85;margin-top:8px">HOUSE</span>
+          <span style="font-weight:300;font-size:24px;transform:scale(1.55,.85);line-height:.9;margin-top:2px">MUSIC</span>
+          <span style="font-weight:900;font-size:44px;transform:scale(.95,1.25);line-height:.85;margin-top:4px">VAYA</span>
+        </div>
+        <div class="txt">
+          <div class="label">Poster-Typo · auch Bastardo</div>
+          <div class="note"><b>Schnitte im Wechsel:</b> Black für Zahl und Titel, Light/Regular für Zwischenwörter.</div>
+          <div class="note"><b>Gestaucht oder gestreckt</b>, bis jede Zeile die Breite füllt.</div>
+          <div class="note"><b>Box:</b> KPO-Rot, leicht durchsichtig, kaum Rand. Die Zahl füllt sie fast ganz.</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex; flex-direction:column; gap:16px; min-height:0">
+      <div class="weights">
+        <span style="font-weight:300">Kind<small>Light 300</small></span>
+        <span style="font-weight:400">Kind<small>Regular 400</small></span>
+        <span style="font-weight:600">Kind<small>Semibold 600</small></span>
+        <span style="font-weight:700">Kind<small>Bold 700</small></span>
+        <span style="font-weight:900">Kind<small>Black 900</small></span>
+        <span class="note" style="font-family:var(--kpo-font-ui);font-size:13px;margin-left:auto;max-width:250px"><b>Bastardo Rounded</b>: Marken-Schrift für Website, App und Overlays.</span>
+      </div>
+      <div class="scale">
+        <div class="step"><div class="spec"><b>Display</b>120 · Black · 0.9 · −4 %</div><div class="bas" style="font-size:96px;font-weight:900;line-height:.9;letter-spacing:-.04em;text-transform:uppercase">House Music</div></div>
+        <div class="step"><div class="spec"><b>H1</b>64 · Black · 1.0 · −4 %</div><div class="bas" style="font-size:56px;font-weight:900;line-height:1;letter-spacing:-.04em;text-transform:uppercase">Past Events</div></div>
+        <div class="step"><div class="spec"><b>H2</b>40 · Black · −3 %</div><div class="bas" style="font-size:38px;font-weight:900;letter-spacing:-.03em;text-transform:uppercase">2026 Closing</div></div>
+        <div class="step"><div class="spec"><b>H3</b>24 · Bold · −3 %</div><div class="bas" style="font-size:24px;font-weight:700;letter-spacing:-.03em">Eat and Greet, Karlsruhe</div></div>
+        <div class="step"><div class="spec"><b>Text</b>16 · Light · 1.6</div><div class="bas" style="font-size:16px;font-weight:300;letter-spacing:-.02em;color:var(--kpo-muted)">House music all night, no bad energy. Für alle, die nett sind.</div></div>
+        <div class="step"><div class="spec"><b>Label</b>12 · Semibold · +8 %</div><div style="font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--kpo-muted)">Sat · November 21 · 23:00</div></div>
+        <div class="step"><div class="spec"><b>UI-Text</b>14–16 · SF Pro / Inter</div><div style="font-size:15px">Zahlen, Tabellen und Formulare in App und Admin: <span style="font-variant-numeric:tabular-nums;font-weight:600">43.010 € · 3.126 Tickets</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot"><span>Dateien: src/fonts/bastardo · ios/KPO/Fonts</span><span>brand/tokens.css</span></div>
+</div></body></html>

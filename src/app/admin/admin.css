@@ -13,7 +13,7 @@
   --a-faint: #757575;
   --a-accent: #ff3b3b;
   --a-bar: #d4d4d4;
-  --a-good: #3fcf8e;
+  --a-good: #3ddc97;
   --a-bad: #ff6b5e;
   --a-warn: #f5b84a;
   --a-sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -582,7 +582,7 @@ table.t {
 
 .badge.good {
   color: var(--a-good);
-  background: rgba(63, 207, 142, 0.12);
+  background: rgba(61, 220, 151, 0.12);
 }
 
 .badge.bad {

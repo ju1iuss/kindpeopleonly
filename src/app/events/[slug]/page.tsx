@@ -13,6 +13,7 @@ import {
   isPlaceholder,
 } from "@/lib/format";
 import { siteConfig } from "@/lib/site";
+import { KpoText } from "@/components/KpoText";
 
 export const revalidate = 60;
 
@@ -127,8 +128,8 @@ export default async function EventPage({ params }: PageProps) {
             <p className="mb-2 text-[0.8rem] font-light uppercase text-muted">
               {formatEventDateTime(event.datum, event.uhrzeit)}
             </p>
-            <h1 className="mb-4 font-display text-[clamp(2.75rem,7vw,4.5rem)] font-black leading-[0.98] uppercase">
-              {event.titel}
+            <h1 className="mb-4 font-display text-[clamp(2.75rem,7vw,4.5rem)] leading-[0.98] uppercase">
+              <KpoText text={event.titel} />
             </h1>
 
             {almostGone && (

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><link rel="stylesheet" href="board.css">
+<style>
+  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
+  .col { display: flex; flex-direction: column; gap: 14px; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 46px; padding: 0 26px; border-radius: 999px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .02em; font-family: var(--kpo-font-display); }
+  .btn.red { background: var(--kpo-red); color: var(--kpo-red-ink); border: 1px solid rgba(25, 8, 8, .35); box-shadow: var(--kpo-button-shine); }
+  .btn.ghost { border: 1px solid rgba(242, 240, 236, .28); color: var(--kpo-white); background: rgba(242, 240, 236, .05); }
+  .btn.soft { background: var(--kpo-surface-2); color: var(--kpo-white); text-transform: none; font-family: var(--kpo-font-ui); font-weight: 600; height: 36px; padding: 0 16px; }
+  .badges { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  .b { padding: 5px 13px; border-radius: 999px; font-size: 11px; font-weight: 800; text-transform: uppercase; font-family: var(--kpo-font-display); }
+  .event { background: transparent; }
+  .event .img { position: relative; height: 250px; border-radius: 20px; overflow: hidden; }
+  .event .img img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 80%; }
+  .event .img .b { position: absolute; top: 14px; left: 14px; }
+  .event .meta { margin-top: 14px; font-family: var(--kpo-font-display); font-weight: 300; font-size: 12px; text-transform: uppercase; color: var(--kpo-muted); }
+  .event .t { font-family: var(--kpo-font-display); font-weight: 700; font-size: 30px; letter-spacing: -.03em; text-transform: uppercase; line-height: 1.05; }
+  .kpi { background: var(--kpo-surface); border-radius: 16px; padding: 18px 20px; }
+  .kpi small { color: var(--kpo-muted); font-size: 13px; }
+  .kpi b { display: block; margin-top: 4px; font-family: var(--kpo-font-display); font-size: 32px; font-weight: 700; letter-spacing: -.03em; }
+  .kpi span { font-size: 12px; color: var(--kpo-muted); }
+  .radii { display: flex; gap: 12px; align-items: flex-end; }
+  .radii div { background: var(--kpo-surface-2); display: flex; align-items: flex-end; justify-content: center; padding-bottom: 6px; font-size: 11px; color: var(--kpo-muted); }
+  .space { display: flex; gap: 8px; align-items: flex-end; }
+  .space i { display: block; background: var(--kpo-red); opacity: .85; border-radius: 2px; }
+  .rules { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px; }
+  .rules div { font-size: 13px; color: var(--kpo-muted); line-height: 1.45; }
+  .rules b { color: var(--kpo-white); }
+  .fx { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
+  .fx-tile { position: relative; height: 150px; border-radius: 20px; overflow: hidden; }
+  .fx-tile > span:not(.btn) { position: absolute; left: 14px; bottom: 12px; z-index: 2; font-size: 12px; font-weight: 600; background: rgba(10,10,10,.7); padding: 4px 10px; border-radius: 999px; }
+  .fx-cap { position: static !important; background: none !important; color: var(--kpo-muted); max-width: 170px; font-size: 12px; line-height: 1.4; }
+  .glass { position: absolute; left: 16px; right: 16px; bottom: 16px; padding: 14px 16px; border-radius: 18px; background: rgba(28,28,28,.45); backdrop-filter: blur(18px) saturate(1.2); -webkit-backdrop-filter: blur(18px) saturate(1.2); font-size: 13px; font-weight: 600; }
+</style></head>
+<body><div class="board">
+  <div class="head">
+    <h1>UI-Bausteine</h1>
+    <div class="meta"><span>Brand v1 · 03 · Website, App, Admin</span><img src="../../public/assets/logo.png" alt=""></div>
+  </div>
+
+  <div class="grid">
+    <div class="col">
+      <div class="label">Buttons</div>
+      <div style="display:flex;gap:12px"><span class="btn red">Tickets</span><span class="btn ghost">More Info</span></div>
+      <div><span class="btn soft">Aktualisieren</span></div>
+      <div class="note">Haupt-Aktion immer Rot, eine pro Ansicht. Pillenform, Versalien.</div>
+      <div class="label" style="margin-top:10px">Labels</div>
+      <div class="badges">
+        <span class="b" style="background:var(--kpo-red);color:var(--kpo-red-ink)">Sold out</span>
+        <span class="b" style="background:rgba(18,18,18,.75);outline:1px solid #2a2a2a">Coming soon</span>
+        <span class="red-tag display" style="font-size:20px;line-height:1.1;letter-spacing:-.02em">Karlsruhe</span>
+      </div>
+      <div class="note">Eckiges rotes Label nur für Stadt/Datum (wie auf dem Flyer), runde Badges für Status.</div>
+    </div>
+
+    <div class="col">
+      <div class="label">Event-Karte (Website)</div>
+      <div class="event">
+        <div class="img grain"><img src="../../public/assets/hero-poster.jpg" alt=""><span class="b" style="background:var(--kpo-red);color:var(--kpo-red-ink)">Tickets</span></div>
+        <div class="meta">Sat · November 21, 2026 · 23:00</div>
+        <div class="t">2026 Closing</div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="label">Kennzahl (App, Admin)</div>
+      <div class="kpi"><small>Ticketumsatz 2026</small><b>43.010 €</b><span><span style="color:var(--kpo-good)">+37.442 €</span> zum Vorjahr</span></div>
+      <div class="label" style="margin-top:6px">Radien</div>
+      <div class="radii">
+        <div style="width:110px;height:44px;border-radius:999px">Pille 999</div>
+        <div style="width:90px;height:90px;border-radius:20px">Karte 20</div>
+        <div style="width:70px;height:56px;border-radius:12px">Feld 12</div>
+        <div style="width:24px;height:70px;border-radius:4px 4px 0 0"></div>
+      </div>
+      <div class="label" style="margin-top:6px">Abstände 4 · 8 · 12 · 16 · 24 · 32 · 48 · 64</div>
+      <div class="space"><i style="width:4px;height:4px"></i><i style="width:8px;height:8px"></i><i style="width:12px;height:12px"></i><i style="width:16px;height:16px"></i><i style="width:24px;height:24px"></i><i style="width:32px;height:32px"></i><i style="width:48px;height:48px"></i><i style="width:64px;height:64px"></i></div>
+    </div>
+  </div>
+
+  <div class="fx">
+    <div class="fx-tile grain" style="background:url('../../public/assets/hero-poster.jpg') center/cover"><span>Filmkorn 8–12 % auf Fotos und Video</span></div>
+    <div class="fx-tile" style="display:flex;align-items:center;justify-content:center;gap:18px;background:var(--kpo-surface)"><span class="btn red">Tickets</span><span class="fx-cap">Button-Glanz: innen oben hell, unten dunkel</span></div>
+    <div class="fx-tile" style="background:url('img/foto-crowd-licht.jpg') center/cover"><div class="glass">Liquid Glass (iOS): Unschärfe statt Rahmen</div></div>
+  </div>
+
+  <div class="rules card" style="padding:20px 24px">
+    <div><b>Keine Rahmen um Karten.</b> Tiefe nur über Fläche #1C1C1C auf Nacht #121212, in iOS über Liquid Glass.</div>
+    <div><b>Kein Farbstich.</b> Hintergründe neutral grau, Rot nur als Akzent, nie als Fläche hinter Text-Blöcken.</div>
+    <div><b>Wenig, aber klar.</b> Das Wichtigste oben, Einstellungen klein unten. Ein Akzent pro Ansicht.</div>
+    <div><b>Zahlen</b> in UI-Schrift mit gleich breiten Ziffern, Überschriften in Bastardo.</div>
+  </div>
+
+  <div class="foot"><span>Website: src/app/globals.css · App: ios/KPO/Theme.swift · Admin: src/app/admin/admin.css</span><span>brand/tokens.css</span></div>
+</div></body></html>

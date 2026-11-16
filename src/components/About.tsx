@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { KpoText } from "@/components/KpoText";
 
 type AboutProps = {
   heading?: string;
@@ -34,9 +35,9 @@ export function About({
       <div className="relative mx-auto max-w-[var(--max-w)]">
         <h2
           id="about-heading"
-          className="mb-[clamp(1.25rem,3vw,2rem)] font-display text-[clamp(2.5rem,7vw,4.5rem)] font-black leading-[0.98] uppercase"
+          className="mb-[clamp(1.25rem,3vw,2rem)] font-display text-[clamp(2.5rem,7vw,4.5rem)] leading-[0.98] uppercase"
         >
-          {heading}
+          <KpoText text={heading} />
         </h2>
         <p className="m-0 max-w-[34rem] text-[clamp(1.05rem,2vw,1.25rem)] font-light leading-[1.7] text-ink">
           {text}

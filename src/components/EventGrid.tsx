@@ -1,5 +1,6 @@
 import type { Event } from "@/lib/types";
 import { EventCard } from "@/components/EventCard";
+import { KpoText } from "@/components/KpoText";
 
 type EventGridProps = {
   events: Event[];
@@ -26,9 +27,9 @@ export function EventGrid({ events }: EventGridProps) {
     >
       <h2
         id="events-heading"
-        className="mb-[clamp(2rem,5vw,3.5rem)] font-display text-[clamp(3rem,9vw,5.5rem)] font-black leading-[0.98] uppercase"
+        className="mb-[clamp(2rem,5vw,3.5rem)] font-display text-[clamp(3rem,9vw,5.5rem)] leading-[0.98] uppercase"
       >
-        Upcoming Events
+        <KpoText text="Upcoming Events" />
       </h2>
       {upcoming.length > 0 ? (
         <ul className="m-0 grid list-none grid-cols-2 gap-x-3 gap-y-12 p-0 md:grid-cols-[repeat(auto-fill,minmax(min(300px,100%),1fr))] md:gap-x-[clamp(1.5rem,3vw,2rem)] md:gap-y-[clamp(2rem,4vw,2.75rem)]">
@@ -42,8 +43,8 @@ export function EventGrid({ events }: EventGridProps) {
 
       {past.length > 0 && (
         <div className="mt-[clamp(4rem,9vw,7rem)]">
-          <h2 className="mb-[clamp(2rem,5vw,3.5rem)] font-display text-[clamp(2.5rem,7vw,4.5rem)] font-black leading-[0.98] uppercase">
-            Past Events
+          <h2 className="mb-[clamp(2rem,5vw,3.5rem)] font-display text-[clamp(2.5rem,7vw,4.5rem)] leading-[0.98] uppercase">
+            <KpoText text="Past Events" />
           </h2>
           <ul className="m-0 grid list-none grid-cols-2 gap-x-3 gap-y-12 p-0 md:grid-cols-[repeat(auto-fill,minmax(min(300px,100%),1fr))] md:gap-x-[clamp(1.5rem,3vw,2rem)] md:gap-y-[clamp(2rem,4vw,2.75rem)]">
             {past.map((event) => (

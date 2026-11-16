@@ -1,0 +1,53 @@
+/* kindpeopleonly – Brand-Tokens v1 (2026-11-16)
+   Eine Quelle für Website, Admin, App und Content. Werte hier ändern, dann überall nachziehen.
+   Regel: Hintergründe neutral (R = G = B), Rot nur als Akzent bzw. als Licht im Content. */
+
+:root {
+  /* Marke */
+  --kpo-red: #ff3b3b;          /* KPO-Rot: Buttons, Labels, Highlights */
+  --kpo-red-deep: #b3201f;     /* tiefes Rot: rotes Licht in Fotos/Video, nie als UI-Fläche */
+  --kpo-red-ink: #190808;      /* Text auf Rot */
+
+  /* Neutral (kein Farbstich) */
+  --kpo-black: #0a0a0a;        /* Tiefschwarz: Video, Flyer */
+  --kpo-night: #121212;        /* Hintergrund UI */
+  --kpo-surface: #1c1c1c;      /* Karten, Flächen */
+  --kpo-surface-2: #252525;    /* aktive Flächen, Hover */
+  --kpo-line: #2a2a2a;         /* Haarlinien */
+  --kpo-faint: #757575;        /* schwacher Text */
+  --kpo-muted: #a6a6a6;        /* gedämpfter Text */
+  --kpo-white: #f2f0ec;        /* Off-White: Text und helle Flächen */
+
+  /* Status, nur in UI (nie in Content) */
+  --kpo-good: #3ddc97;
+  --kpo-warn: #f5b84a;
+  --kpo-bad: #ff6b5e;
+
+  /* Schrift */
+  --kpo-font-display: "Bastardo Rounded", "Helvetica Neue", Arial, sans-serif;
+  --kpo-font-ui: -apple-system, BlinkMacSystemFont, "SF Pro Text", Inter, "Segoe UI", Roboto, Arial, sans-serif;
+
+  /* Größen (px, Web/App) */
+  --kpo-size-display: 120px;   /* Bastardo Black, Versalien, Zeilenhöhe 0.9, Laufweite -4 % */
+  --kpo-size-h1: 64px;         /* Bastardo Black */
+  --kpo-size-h2: 40px;         /* Bastardo Black */
+  --kpo-size-h3: 24px;         /* Bastardo Bold */
+  --kpo-size-body: 16px;       /* Bastardo Light (Website) oder UI-Schrift (App/Admin) */
+  --kpo-size-small: 13px;
+  --kpo-size-label: 12px;      /* Semibold, Versalien, Laufweite +8 % */
+
+  /* Form */
+  --kpo-radius-pill: 999px;    /* Buttons, Badges */
+  --kpo-radius-card: 20px;     /* Karten Website (App: 24) */
+  --kpo-radius-input: 12px;
+  --kpo-radius-mark: 4px;      /* Diagrammbalken */
+  --kpo-space: 4px 8px 12px 16px 24px 32px 48px 64px;
+
+  /* Effekte */
+  --kpo-grain: 0.1;            /* Filmkorn auf Fotos/Video: 8–12 % */
+  --kpo-caption-tracking: -0.05em;
+  --kpo-caption-box: rgba(10, 10, 10, 0.4); /* Namensschild: 40 % Box. Titel: #0a0a0a voll */
+  --kpo-caption-shadow: 0 3px 6px rgba(0, 0, 0, 0.8); /* KPO-Untertitel: Versalien, Schatten statt Box, Gewicht pro Buchstabe Regular/Semibold/Bold */
+  --kpo-datebox: rgba(255, 59, 59, 0.88); /* Flyer-Datum-Box */
+  --kpo-button-shine: inset 0 1px 0 rgba(255, 255, 255, 0.28), inset 0 -2px 6px rgba(0, 0, 0, 0.22);
+}

@@ -31,7 +31,7 @@ export function Hero({ logoSrc, posterSrc, claim }: HeroProps) {
         }}
       />
       <div className="hero-content relative z-[1] p-6 text-center [animation:hero-in_1.2s_cubic-bezier(0.22,1,0.36,1)_0.15s_both]">
-        <div className="relative mx-auto w-[min(280px,52vw)]">
+        <div className="relative mx-auto w-[min(210px,40vw)]">
           <Image
             src={logoSrc}
             alt="Kind People Only"
